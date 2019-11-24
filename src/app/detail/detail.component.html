@@ -1,0 +1,27 @@
+<div *ngIf="hero; else notShow">
+  <h2>Name: {{ hero.name | uppercase }}</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name"/>
+    </label>
+  </div>
+  <button (click)="onGoBack()">[Back]</button>
+  <button (click)="onSave()">[Save]</button>
+</div>
+
+<ng-template #notShow>
+
+ <div *ngFor="let h of heros$ | async">
+      <h2>Name: {{ h.name | uppercase }}</h2>
+  <div><span>id: </span>{{h.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="h.name" placeholder="name"/>
+    </label>
+  </div>
+ </div>
+  <button (click)="onGoBack()">[Back]</button>
+  <button (click)="onSave()">[Save]</button>
+
+</ng-template>
