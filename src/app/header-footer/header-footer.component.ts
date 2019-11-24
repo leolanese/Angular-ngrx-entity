@@ -8,10 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class HeaderFooterComponent implements OnInit {
 
   @Input()
-  title: string;
-
-  @Input()
-  value: any;
+  value: string;
 
   constructor() {}
 

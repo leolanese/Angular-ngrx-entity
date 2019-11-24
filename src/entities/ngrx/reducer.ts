@@ -3,8 +3,6 @@ import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { Name } from './name';
 import * as nameActions from './actions';
 
-import { Observable } from 'rxjs/Observable';
-
 export interface HeroState extends EntityState<Name> {
   selectedHeroId: number | null;
  }
@@ -22,9 +20,6 @@ export function heroReducer(
   action
 ) {
   console.log(action.type);
-  /**
-   * using Adapter Collection Methods
-   */
   switch (action.type) {
     case nameActions.ADD_NAME_SUCCESS:
       return heroAdapter.addOne(action.payload, state);
@@ -57,4 +52,4 @@ export const getSelectedHero = createSelector(
     (state) => {
       return state.entities[state.selectedHeroId];
     }
-)
+);
