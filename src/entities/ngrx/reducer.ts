@@ -32,7 +32,7 @@ export function heroReducer(
       return heroAdapter.addAll(action.payload, state);
     case nameActions.UPDATE_NAME_SUCCESS:
       return heroAdapter.updateOne(action.payload, state);
-    case nameActions.DELETE_NAME_SUCCESS:      
+    case nameActions.DELETE_NAME_SUCCESS:
       return heroAdapter.removeOne(action.payload, state);
     case nameActions.SELECT_NAME:
       return state.selectedHeroId = action.payload;

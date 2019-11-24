@@ -7,7 +7,7 @@ import { NameService } from '../name.service';
 import { Store } from '@ngrx/store';
 import * as heroActions from '../../entities/ngrx/actions';
 import { selectAllHeroes, getSelectedHero } from '../../entities/ngrx/reducer';
-
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
@@ -29,7 +29,8 @@ export class DetailComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private nameService: NameService,
     private location: Location,
-    private store: Store<any>
+    private store: Store<any>,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -54,11 +55,12 @@ export class DetailComponent implements OnInit, OnDestroy {
   }
 
   public onGoBack(): void {
-    this.location.back();
+    this.router.navigate([`/heroes`])
   }
 
   public onSave(): void {
+    console.log('')
    this.store.dispatch(new heroActions.UpdateHero(this.hero));
-   this.onGoBack();
+   this.router.navigate([`/heroes`])
   }
 }
