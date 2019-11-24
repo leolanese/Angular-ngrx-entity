@@ -8,7 +8,6 @@
         <label>Add New Users:
           <input #addName />
         </label>
-        <!-- (click) passes input value to add() and then clears the input -->
         <button (click)="onAdd(addName.value); addName.value=''">
           [Add]
         </button>
@@ -16,11 +15,10 @@
 
     </div>
 
-<div class="wrapper-buttons">
-  <button class="" title="edit hero" (click)="onEditAll()">[Edit ALL]</button>
-  <button class="" title="edit hero" (click)="onDeleteAll()">[Delete ALL]</button>
-</div>
-
+    <div class="wrapper-buttons">
+      <button class="" title="edit hero" (click)="onEditAll()">[ Edit ALL ]</button>
+      <button class="" title="edit hero" (click)="onDeleteAll()">[ Delete ALL ]</button>
+    </div>
 
 
     <div class="panel-body  wrapper-inner">
@@ -35,13 +33,13 @@
             </button>
           </span>
 
-          <ul class="heroes">
+          <ul class="names">
             <li *ngFor="let hero of heroes">
               <p>
                 {{hero.name}}
               </p>
-              <button class="btn button delete" title="edit hero" (click)="onEdit(hero)">[Edit]</button>
-              <button class="btn button delete" title="delete hero" (click)="onDelete(hero)">[Delete]</button>
+              <button class="btn button delete" title="edit hero" (click)="onEdit(hero)">[ Edit ]</button>
+              <button class="btn button delete" title="delete hero" (click)="onDelete(hero)">[ Delete ]</button>
             </li>
           </ul>
 

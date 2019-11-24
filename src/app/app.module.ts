@@ -9,7 +9,6 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { DetailComponent } from './detail/detail.component';
 import { ElementsComponent } from './elements/elements.component';
 import { SearchComponent } from './search/search.component';
@@ -50,7 +49,6 @@ import { HeaderFooterComponent }  from './header-footer/header-footer.component'
   ],
   declarations: [
     AppComponent,
-    DashboardComponent,
     ElementsComponent,
     DetailComponent,
     MessagesComponent,

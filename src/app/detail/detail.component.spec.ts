@@ -57,5 +57,4 @@ beforeEach(() => {
     expect(navigateSpy).toHaveBeenCalledWith(['/expectedUrl']);
   });
 
-
 });

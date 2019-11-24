@@ -1,10 +1,10 @@
-.heroes {
+.names {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
   width: 15em;
 }
-.heroes li {
+.names li {
   position: relative;
   cursor: pointer;
   background-color: #EEE;
@@ -14,7 +14,7 @@
   border-radius: 4px;
 }
 
-.heroes a {
+.names a {
   color: #888;
   text-decoration: none;
   position: relative;
@@ -23,7 +23,7 @@
 }
 
 
-.heroes .badge {
+.names .badge {
   display: inline-block;
   font-size: small;
   color: white;

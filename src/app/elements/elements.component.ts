@@ -50,7 +50,6 @@ export class ElementsComponent implements OnInit {
 
   onEditAll() : void {
     this.router.navigate([`/detail/all`])
-    // this.store.dispatch(new heroActions.EditAllNames());
   }
 
 }
