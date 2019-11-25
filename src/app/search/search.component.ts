@@ -31,8 +31,8 @@ export class SearchComponent implements OnInit {
 
   public searchStore(term){
     var filteredHeroes: Name[];
-    this.store.select(selectAllHeroes).subscribe(heroes => {
-      filteredHeroes = heroes.filter(hero=>hero.name.toLowerCase().indexOf(term.toLowerCase()) != -1);
+    this.store.select(selectAllHeroes).subscribe(names => {
+      filteredHeroes = names.filter(hero=>hero.name.toLowerCase().indexOf(term.toLowerCase()) != -1);
       });
 
     return of(filteredHeroes);

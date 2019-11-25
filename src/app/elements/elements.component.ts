@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./elements.component.css']
 })
 export class ElementsComponent implements OnInit {
-  heroes: Name[];
+  names: Name[];
 
   constructor
   (private nameService: NameService,
@@ -25,8 +25,8 @@ export class ElementsComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.store.select(selectAllHeroes).subscribe(heroes=>{
-    this.heroes = heroes;
+    this.store.select(selectAllHeroes).subscribe(names => {
+    this.names = names;
     });
   }
 

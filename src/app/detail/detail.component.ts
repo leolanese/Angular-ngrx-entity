@@ -5,7 +5,7 @@ import { Location } from '@angular/common';
 import { Name } from '../../entities/ngrx/name';
 import { NameService } from '../name.service';
 import { Store } from '@ngrx/store';
-import * as heroActions from '../../entities/ngrx/actions';
+import * as namesActions from '../../entities/ngrx/actions';
 import { selectAllHeroes, getSelectedHero } from '../../entities/ngrx/reducer';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
@@ -59,8 +59,7 @@ export class DetailComponent implements OnInit, OnDestroy {
   }
 
   public onSave(): void {
-    console.log('')
-   this.store.dispatch(new heroActions.UpdateHero(this.hero));
+   this.store.dispatch(new namesActions.UpdateHero(this.hero));
    this.router.navigate([`/heroes`])
   }
 }

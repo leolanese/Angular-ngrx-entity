@@ -11,9 +11,8 @@ import { FormsModule } from "@angular/forms";
 import { NameService } from "../name.service";
 import { Store, StoreModule } from "@ngrx/store";
 import * as reducers from "../../entities/ngrx/reducer";
-import {EntityState} from "@ngrx/entity";
 
-fdescribe('Validate DetailComponent', () => {
+describe('Validate DetailComponent', () => {
   let component: DetailComponent;
   let fixture: ComponentFixture<DetailComponent>;
   let router: Router;
@@ -29,7 +28,6 @@ fdescribe('Validate DetailComponent', () => {
         FormsModule
       ],
       providers: [
-
        { provide: NameService, useValue: {} }
       ],
     declarations: [DetailComponent],
@@ -45,16 +43,41 @@ beforeEach(() => {
     fixture.detectChanges();
   });
 
-  fit('should create component', () => {
+  it('should create component', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should navigate', () => {
+  it('should navigate onGoBack', () => {
     const component = fixture.componentInstance;
     const navigateSpy = spyOn(router, 'navigate');
 
     component.onGoBack();
-    expect(navigateSpy).toHaveBeenCalledWith(['/expectedUrl']);
+    expect(navigateSpy).toHaveBeenCalledWith(['/heroes']);
+  });
+
+  it('should navigate onSave', () => {
+    const component = fixture.componentInstance;
+    const navigateSpy = spyOn(router, 'navigate');
+
+    component.onGoBack();
+    expect(navigateSpy).toHaveBeenCalledWith(['/heroes']);
+  });
+
+  it('should navigate onSave', () => {
+    const component = fixture.componentInstance;
+    const navigateSpy = spyOn(router, 'navigate');
+
+    component.onGoBack();
+    expect(navigateSpy).toHaveBeenCalledWith(['/heroes']);
+  });
+
+  it('should store get dispatch triggered', () => {
+    store = TestBed.get(Store);
+    const dispatchSpy = spyOn(store, 'dispatch');
+
+    component.onSave();
+    expect(dispatchSpy).toHaveBeenCalledTimes(1);
+    expect(dispatchSpy).toHaveBeenCalled();
   });
 
 });

@@ -28,13 +28,14 @@
               <button class="btn button save" (click)="onAdd(saveName.value); saveName.value=''">[ Save ]</button>
           </div>
 
-          <ul class="names">
-            <li *ngFor="let hero of heroes">
+
+          <ul class="names" *ngIf="names">
+            <li *ngFor="let name of names">
               <p>
-                {{hero.name}}
+                {{name.name}}
               </p>
-              <button class="btn button delete" title="edit" (click)="onEdit(hero)">[ Edit ]</button>
-              <button class="btn button delete" title="delete" (click)="onDelete(hero)">[ Delete ]</button>
+              <button class="btn button delete" title="edit" (click)="onEdit(name)">[ Edit ]</button>
+              <button class="btn button delete" title="delete" (click)="onDelete(name)">[ Delete ]</button>
             </li>
           </ul>
 

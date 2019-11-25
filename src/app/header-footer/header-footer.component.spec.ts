@@ -1,7 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderFooterComponent } from './header-footer.component';
-import { Component, DebugElement, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { DebugElement, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { configureTestSuite } from 'ng-bullet';
 
@@ -23,15 +23,15 @@ describe('Validate HeaderFooterComponent', () => {
         fixture.detectChanges();
     });
 
-    it('should create component', () => {
+    it('should HeaderFooterComponent create component', () => {
         expect(component).toBeTruthy();
     });
 
-    it('should have class', () => {
-        expect(fixture.nativeElement.querySelector('div').classList.value).toEqual('panel-heading');
+    it('should HeaderFooterComponent have class', () => {
+        expect(fixture.nativeElement.querySelector('div').classList.value).toEqual('panel-heading panel-heading container wrapper-container');
     });
 
-    it('should navigate', () => {
+    it('should HeaderFooterComponent navigate', () => {
         component.value = 'test input';
         fixture.detectChanges();
         expect(fixture.nativeElement.querySelector('div h2').innerText).toEqual('test input');
