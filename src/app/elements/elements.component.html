@@ -8,38 +8,33 @@
         <label>Add New Users:
           <input #addName />
         </label>
-        <button (click)="onAdd(addName.value); addName.value=''">
-          [Add]
-        </button>
+        <button class="btn button" (click)="onAdd(addName.value); addName.value=''">[ Add ]</button>
       </div>
 
     </div>
 
     <div class="wrapper-buttons">
-      <button class="" title="edit hero" (click)="onEditAll()">[ Edit ALL ]</button>
-      <button class="" title="edit hero" (click)="onDeleteAll()">[ Delete ALL ]</button>
+      <button class="btn button" title="edit all" (click)="onEditAll()">[ Edit ALL ]</button>
+      <button class="btn button" title="delete all" (click)="onDeleteAll()">[ Delete ALL ]</button>
     </div>
-
 
     <div class="panel-body  wrapper-inner">
         <div class="text-center">
 
-          <span>
-            <input #saveName />
-          </span>
-          <span class="btn button">
-            <button class="btn save" (click)="onAdd(saveName.value); saveName.value=''">
-            Save
-            </button>
-          </span>
+          <div class="wrapper-input">
+             <span>
+              <input #saveName />
+             </span>
+              <button class="btn button save" (click)="onAdd(saveName.value); saveName.value=''">[ Save ]</button>
+          </div>
 
           <ul class="names">
             <li *ngFor="let hero of heroes">
               <p>
                 {{hero.name}}
               </p>
-              <button class="btn button delete" title="edit hero" (click)="onEdit(hero)">[ Edit ]</button>
-              <button class="btn button delete" title="delete hero" (click)="onDelete(hero)">[ Delete ]</button>
+              <button class="btn button delete" title="edit" (click)="onEdit(hero)">[ Edit ]</button>
+              <button class="btn button delete" title="delete" (click)="onDelete(hero)">[ Delete ]</button>
             </li>
           </ul>
 

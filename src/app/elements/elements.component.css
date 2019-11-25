@@ -1,19 +1,18 @@
 .names {
   margin: 0 0 2em 0;
   list-style-type: none;
-  padding: 0;
+  padding: 5px;
   width: 15em;
 }
 .names li {
   position: relative;
   cursor: pointer;
-  background-color: #EEE;
+  background-color: #eee;
   margin: .5em;
   padding: .3em 0;
-  height: 50px;
+  height: 30px;
   border-radius: 4px;
 }
-
 .names a {
   color: #888;
   text-decoration: none;
@@ -21,8 +20,6 @@
   display: block;
   width: 250px;
 }
-
-
 .names .badge {
   display: inline-block;
   font-size: small;
@@ -39,7 +36,6 @@
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
 }
-
 .button {
   background-color: #eee;
   border: none;
@@ -50,18 +46,14 @@
   font-family: Arial;
   margin: 5px;
 }
-
 button.delete {
   position: relative;
   left: 194px;
-  top: -32px;
-  background-color: gray !important;
-  color: white;
+  top: -52px;
+  background-color: #ededed;
 }
-
-
 .wrapper-name {
-  border: 1px solid #808080;
+  border: 1px solid #9cd06d;
   padding: 5px;
 }
 .wrapper-name a span {
@@ -73,19 +65,23 @@ button.delete {
 .wrapper-name > button {
   text-align: right;
 }
-
+.wrapper-input {
+  padding: 20px 20px 20px 10px;
+  text-align: left;
+}
 .wrapper-buttons {
   text-align: left;
   border-top: 1px solid;
+  padding: 20px 20px 20px 20px;
 }
 .wrapper-buttons button {
   padding: 5px;
   margin: 5px;
 }
 .panel-body {
-  padding: 20px;
+  padding: 20px 20px 20px 15px;
+  text-align: left;
 }
-
 .panel-body.wrapper-inner {
   border-top: 1px solid;
 }
