@@ -1,4 +1,4 @@
-# TEST San
+# Testing @ngrx-entity
 
 ## Development server
 
