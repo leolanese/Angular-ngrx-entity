@@ -1,4 +1,4 @@
-# Testing @ngrx-entity
+# Testing @ngrx-entity with Angular8
 
 ## Development server
 
