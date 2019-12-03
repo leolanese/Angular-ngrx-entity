@@ -1,11 +1,6 @@
 # Testing @ngrx-entity with Angular8
 
 
-## Github:
-https://stackblitz.com/edit/ngrx-entity-real-v4-f11
-Note: stackblitz version doesn't include unit-test
-
----
 
 ## Development server
 
@@ -30,6 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Github:
+https://stackblitz.com/edit/ngrx-entity-real-v4-f11 <br/>
+<sub>Note: stackblitz version doesn't include unit-test, they are only in github repo</sub>
 
 ---
 
